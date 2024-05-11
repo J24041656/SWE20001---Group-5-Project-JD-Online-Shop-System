@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manage Staffs</title>
+    <link rel="stylesheet" href="cssadmin/styleadmin.css">
+    <style>
+        /* Additional CSS for the Add New Staff form */
+        .add-staff-form {
+            display: none;
+            margin-top: 20px;
+        }
+
+        .toggle-form-btn {
+            margin-bottom: 10px;
+            cursor: pointer;
+            color: blue;
+            text-decoration: underline;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Main Container -->
+    <div class="dashboard-container">
+        <h1>Manage Staffs</h1>
+
+        <!-- Link back to Dashboard -->
+        <p><a href="adminindex.php">Back to Dashboard</a></p>
+
+        <!-- Search Form -->
+        <form action="#" method="GET" class="search-form">
+            <input type="text" name="search" placeholder="Search...">
+            <button type="submit">Search</button>
+        </form>
+
+        <!-- Staffs Table -->
+        <table class="data-table">
+            <!-- Table headers -->
+            <thead>
+                <tr>
+                    <!-- Placeholder table headers -->
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Phone</th>
+                    <th>Password</th>
+                    <th>Access Level</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Placeholder table rows -->
+                <tr>
+                    <td>1</td>
+                    <td>Staff Name</td>
+                    <td>staff@email.com</td>
+                    <td>123-456-7890</td>
+                    <td>*********</td> <!-- Encrypted Password Placeholder -->
+                    <td>Admin</td>
+                    <td>
+                        <!-- Edit and Delete Buttons (placeholders) -->
+                        <button>Edit</button>
+                        <button>Delete</button>
+                    </td>
+                </tr>
+                <!-- More table rows here -->
+            </tbody>
+        </table>
+
+        <!-- Toggle Button to Show/Hide Add New Staff Form -->
+        <div class="toggle-form-btn" onclick="toggleForm()">Add New Staff</div>
+
+        <!-- Add New Staff Form -->
+        <form action="#" method="POST" class="add-staff-form" id="addStaffForm">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required><br><br>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required><br><br>
+            <label for="phone">Phone:</label>
+            <input type="text" id="phone" name="phone" required><br><br>
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required><br><br>
+            <label for="accessLevel">Access Level:</label>
+            <select id="accessLevel" name="accessLevel" required>
+                <option value="admin">Admin</option>
+                <option value="staff">Staff</option>
+            </select><br><br>
+            <input type="submit" value="Add Staff">
+        </form>
+    </div>
+
+    <script>
+        // JavaScript function to toggle visibility of Add New Staff form
+        function toggleForm() {
+            const form = document.getElementById('addStaffForm');
+            if (form.style.display === 'none') {
+                form.style.display = 'block';
+            } else {
+                form.style.display = 'none';
+            }
+        }
+    </script>
+
+    <?php
+    // Check if the form is submitted
+    if ($_SERVER["REQUEST_METHOD"] == "POST") {
+        // Retrieve form data
+        $name = $_POST['name'];
+        $email = $_POST['email'];
+        $phone = $_POST['phone'];
+        $password = $_POST['password'];
+        $accessLevel = $_POST['accessLevel'];
+
+        // Validate and sanitize form data
+
+        // Hash the password
+        $hashedPassword = password_hash($password, PASSWORD_DEFAULT);
+
+        // Insert data into the database
+        // $sql = "INSERT INTO staff (staffName, staffEmail, staffPhone, staffPassword, staffAccessLevel) VALUES ('$name', '$email', '$phone', '$hashedPassword', '$accessLevel')";
+        // Execute SQL query
+
+        // Redirect to the staff management page after insertion
+        // header("Location: managestaffs.php");
+    }
+    ?>
+</body>
+
+</html>

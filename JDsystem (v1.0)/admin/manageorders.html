@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manage Orders</title>
+    <link rel="stylesheet" href="cssadmin/styleadmin.css">
+    <!--page-icon------------>
+    <link rel="shortcut icon" href="imageadmin/pg-logo.png">
+</head>
+
+<body>
+    <!-- Main Container -->
+    <div class="dashboard-container">
+        <h1>Manage Orders</h1>
+
+        <!-- Link back to Dashboard -->
+        <p><a href="adminindex.php">Back to Dashboard</a></p>
+
+        <!-- Search Form -->
+        <form action="#" method="GET" class="search-form">
+            <input type="text" name="search" placeholder="Search by Order ID">
+            <button type="submit">Search</button>
+        </form>
+
+        <!-- Orders Table -->
+        <table class="data-table">
+            <!-- Table headers -->
+            <thead>
+                <tr>
+                    <th>Order ID</th>
+                    <th>Customer ID</th>
+                    <th>Total Price</th>
+                    <th>Order Status</th>
+                    <th>Tracking Info</th> <!-- Added: Tracking Info column -->
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Placeholder table rows -->
+                <tr>
+                    <td>1</td>
+                    <td>101</td>
+                    <td>$150.00</td>
+                    <td>Processing</td>
+                    <td>Tracking Info</td> <!-- Updated: Placeholder for Tracking Info -->
+                    <td>
+                        <!-- Edit and Delete Buttons (placeholders) -->
+                        <button>Edit</button>
+                        <button>Delete</button>
+                    </td>
+                </tr>
+                <!-- More table rows here -->
+            </tbody>
+        </table>
+
+        <!-- PHP Code (Commented Out) -->
+        <?php
+        /*
+        // Include database connection file
+        require_once('dbconnect.php');
+
+        // Function to add tracking info to an order
+        function addTrackingInfo($orderID, $trackingNumber) {
+            // Implement database update logic here
+            // Example SQL query:
+            // UPDATE orders SET trackingInfo = '$trackingNumber' WHERE orderID = '$orderID';
+        }
+
+        // Sample usage of addTrackingInfo function (commented out for demonstration)
+        /*
+        addTrackingInfo(1, 'XYZ123456');
+        */
+
+        // Note: Replace SQL queries and example data with actual database interaction code and data handling logic.
+        */
+        ?>
+        <!-- End PHP Code -->
+
+    </div>
+</body>
+
+</html>

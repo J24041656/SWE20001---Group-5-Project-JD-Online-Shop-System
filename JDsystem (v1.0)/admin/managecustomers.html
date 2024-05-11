@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Meta tags for character set and viewport -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Page title -->
+    <title>Manage Customers</title>
+    <!-- Link to CSS file -->
+    <link rel="stylesheet" href="cssadmin/styleadmin.css">
+</head>
+
+<body>
+    <!-- Main Container for the dashboard -->
+    <div class="dashboard-container">
+        <!-- Page Title -->
+        <h1>Manage Customers</h1>
+
+        <!-- Link back to Dashboard -->
+        <p><a href="adminindex.php">Back to Dashboard</a></p>
+
+        <!-- Search Form for searching customers -->
+        <form action="#" method="GET" class="search-form">
+            <input type="text" name="search" placeholder="Search...">
+            <button type="submit">Search</button>
+        </form>
+
+        <!-- Customers Table -->
+        <table class="data-table">
+            <!-- Table headers -->
+            <thead>
+                <!-- Table row for headers -->
+                <tr>
+                    <!-- Table header cells -->
+                    <th>Customer ID</th>
+                    <th>Username</th>
+                    <th>Email</th>
+                    <th>Phone</th>
+                    <th>First Name</th>
+                    <th>Last Name</th>
+                    <th>Street Address 1</th>
+                    <th>Street Address 2</th>
+                    <th>Street Address 3</th>
+                    <th>Postcode</th>
+                    <th>Town</th>
+                    <th>State</th>
+                    <th>Status</th>
+                    <th>Membership</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <!-- Table body for customer data -->
+            <tbody>
+                <!-- Placeholder table row for customer data -->
+                <tr>
+                    <!-- Placeholder data for a single customer -->
+                    <td>1</td>
+                    <td>CustomerUsername</td>
+                    <td>customer@email.com</td>
+                    <td>123-456-7890</td>
+                    <td>First</td>
+                    <td>Last</td>
+                    <td>Street 1</td>
+                    <td>Street 2</td>
+                    <td>Street 3</td>
+                    <td>12345</td>
+                    <td>City</td>
+                    <td>State</td>
+                    <td>Active</td>
+                    <td>Gold</td>
+                    <!-- Action buttons for editing and deleting -->
+                    <td>
+                        <button>Edit</button>
+                        <button>Delete</button>
+                    </td>
+                </tr>
+                <!-- More placeholder table rows for additional customers -->
+            </tbody>
+        </table>
+    </div>
+</body>
+
+</html>
