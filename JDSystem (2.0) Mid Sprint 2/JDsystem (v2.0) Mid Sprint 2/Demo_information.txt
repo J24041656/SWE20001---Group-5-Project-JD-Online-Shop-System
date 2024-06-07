@@ -1,0 +1,25 @@
+*FOR DEMONSTRATION PURPOSES:*
+
+*Front-end landing page:*
+http://localhost/JDsystem/index.php?
+
+*Back-end management landing page:*
+http://localhost/JDsystem/admin/index.php?
+
+*All User Passwords:*
+123123
+
+*Test Customer User:*
+joshua@gmail.com
+
+*Test Manager Account:*
+xinrou.chou@jdshop.com
+
+*Test Admin Account:*
+xinhong.eu@jdshop.com
+
+*Add new customer account:*
+faizal.alias@gmail.com
+
+*Add new staff account:*
+faizal.alias@jdshop.com
